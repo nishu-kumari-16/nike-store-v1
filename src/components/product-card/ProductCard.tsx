@@ -21,7 +21,7 @@ export const ProductCard = ({
       className="cursor-pointer group hover:scale-105 transition-all w-80  bg-white shadow-lg rounded-lg"
     >
       <img
-        src={`${"../../public/"}${img}`}
+        src={`${"../"}${img}`}
         alt="adidas"
         className="w-full rounded p-0 m-auto h-80 object-cover"
       />
