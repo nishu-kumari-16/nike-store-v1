@@ -88,7 +88,7 @@ const Product = () => {
                         <img
                           onClick={() => setImageIdex(idx)}
                           alt="Les Paul"
-                          src={`${"../"}${item}`}
+                          src={`${"../nike-store-v1/"}${item}`}
                           className={`cursor-pointer w-12 h-12 aspect-square rounded-lg object-cover ${
                             imageIdex == idx && "border-2"
                           }`}
@@ -102,10 +102,11 @@ const Product = () => {
                         }}
                         className="transition-all relative md:w-full  aspect-square  rounded-lg object-cover"
                       >
-                        {productData.images.map((item) => (
+                        {productData.images.map((item, index) => (
                           <img
                             alt="Les Paul"
-                            src={`${"../"}${item}`}
+                            key={index}
+                            src={`${"../nike-store-v1/"}${item}`}
                             className="w-96 aspect-square md:w-full rounded-lg object-cover"
                           />
                         ))}
@@ -158,10 +159,11 @@ const Product = () => {
                         </legend>
 
                         <div className="flex flex-wrap gap-1">
-                          {productData.colors.map((item) => (
+                          {productData.colors.map((item, index) => (
                             <label
                               htmlFor={`color_${item.split(" ").join("")}`}
                               className="cursor-pointer"
+                              key={index}
                             >
                               <input
                                 type="radio"
@@ -188,8 +190,9 @@ const Product = () => {
                         </legend>
 
                         <div className="flex flex-wrap gap-1">
-                          {productData.sizes.map((item) => (
+                          {productData.sizes.map((item, index) => (
                             <label
+                              key={index}
                               htmlFor={`size_${item.size}`}
                               className="cursor-pointer"
                             >
@@ -274,9 +277,10 @@ const Product = () => {
             <div className="px-4 md:px-24">
               <div className="text-2xl py-4">You May Also Like</div>
               <div className="flex flex-col md:flex-row md:justify-between gap-10">
-                {relatedProduct.map((item) => (
+                {relatedProduct.map((item, index) => (
                   <ProductCard
                     {...item}
+                    key={index}
                     onClick={() => {
                       navigate(`/product/${item.id}`);
                       ref.current?.scrollIntoView({
