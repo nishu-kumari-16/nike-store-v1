@@ -88,7 +88,7 @@ const Product = () => {
                         <img
                           onClick={() => setImageIdex(idx)}
                           alt="Les Paul"
-                          src={`${"../nike-store-v1/"}${item}`}
+                          src={`${"../"}${item}`}
                           className={`cursor-pointer w-12 h-12 aspect-square rounded-lg object-cover ${
                             imageIdex == idx && "border-2"
                           }`}
@@ -106,7 +106,7 @@ const Product = () => {
                           <img
                             alt="Les Paul"
                             key={index}
-                            src={`${"../nike-store-v1/"}${item}`}
+                            src={`${"../"}${item}`}
                             className="w-96 aspect-square md:w-full rounded-lg object-cover"
                           />
                         ))}
