@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 import { ProductCard } from "../../components/product-card/ProductCard";
 import Wrapper from "../../components/wrapper/Wrapper";
-import * as productJson from "../../assets/productsList.json";
+import * as productJson from "../../../public/assets/productsList.json";
 import Loader from "../../components/loader/Loader";
 
 export interface IProductSchema {
