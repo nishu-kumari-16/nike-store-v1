@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://abdulrahilsheikh.github.io/Nike-store-v1",
+  "homepage": "https://nishu-kumari-16.github.io/nike-store-v1",
   "scripts": {
     "dev": "vite --host",
     "build": "tsc && vite build",

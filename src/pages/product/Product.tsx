@@ -88,11 +88,7 @@ const Product = () => {
                         <img
                           onClick={() => setImageIdex(idx)}
                           alt="Les Paul"
-                          src={`${
-                            import.meta.env.DEV
-                              ? "../"
-                              : "https://abdulrahilsheikh.github.io/Nike-Store-v1/"
-                          }${item}`}
+                          src={`${"../../public/"}${item}`}
                           className={`cursor-pointer w-12 h-12 aspect-square rounded-lg object-cover ${
                             imageIdex == idx && "border-2"
                           }`}
@@ -109,11 +105,7 @@ const Product = () => {
                         {productData.images.map((item) => (
                           <img
                             alt="Les Paul"
-                            src={`${
-                              import.meta.env.DEV
-                                ? "../"
-                                : "https://abdulrahilsheikh.github.io/Nike-Store-v1/"
-                            }${item}`}
+                            src={`${"../../public/"}${item}`}
                             className="w-96 aspect-square md:w-full rounded-lg object-cover"
                           />
                         ))}
